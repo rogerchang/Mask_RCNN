@@ -162,6 +162,8 @@ class FootSizerDataset(utils.Dataset):
         # print(files)
 
         for file in files:
+            if not file.endswith(".json"):
+                continue
             file_path = os.path.join(image_dir, os.path.splitext(file)[0]+'.jpeg')
             annotation_path = os.path.join(annotation_dir, file)
             annotation = json.load(open(annotation_path))
