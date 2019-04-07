@@ -199,7 +199,8 @@ class FootSizerDataset(utils.Dataset):
 
         info = self.image_info[image_id]
         polygons = info["polygons"]
-        polygons.pop(0) # remove the bg element
+        if len(polygons) > 2:
+            polygons.pop(0) # remove the bg element
         # print(self.image_info)
         # print(info["polygons"])
         # print(len(info["polygons"]))
