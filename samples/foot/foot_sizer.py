@@ -72,10 +72,12 @@ class FootSizerConfig(Config):
     NUM_CLASSES = 1 + 2  # Background + foot + legal paper
 
     # Number of training steps per epoch
-    STEPS_PER_EPOCH = 100
+    STEPS_PER_EPOCH = 200
 
     # Skip detections with < 90% confidence
     DETECTION_MIN_CONFIDENCE = 0.9
+
+    USE_MINI_MASK = False
 
 
 ############################################################
